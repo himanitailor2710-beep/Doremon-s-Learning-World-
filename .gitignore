@@ -1,0 +1,45 @@
+# Dependencies
+node_modules/
+frontend/node_modules/
+venv/
+backend/venv/
+.venv/
+env/
+
+# Python cache & build artifacts
+__pycache__/
+backend/__pycache__/
+backend/*/__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Environment and secrets
+.env
+.env.local
+.env.*.local
+
+# Temporary uploads & logs
+backend/uploads/*
+!backend/uploads/.gitkeep
+*.log
+
+# OS & Editor files
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+.vscode/
+.idea/
+
+# External large binaries and unrelated files
+cloudflared.exe
+zenith26-fest-system/
+events_seed.xlsx
+Postman-Testing-Commands-Zenith26.md
+Vibe-Coding-Prompts-Zenith26.md
+zenith26-api.postman_collection.json
+Zenith26-Fest-System-Assignment.docx
