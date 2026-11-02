@@ -7,7 +7,14 @@ import json
 import os
 from typing import Any, List, Dict, Optional
 
-DB_FILE = os.path.join(os.path.dirname(__file__), "doraemon_study.db")
+if os.environ.get("VERCEL"):
+    DB_FILE = "/tmp/doraemon_study.db"
+    src_db = os.path.join(os.path.dirname(__file__), "doraemon_study.db")
+    if not os.path.exists(DB_FILE) and os.path.exists(src_db):
+        import shutil
+        shutil.copyfile(src_db, DB_FILE)
+else:
+    DB_FILE = os.path.join(os.path.dirname(__file__), "doraemon_study.db")
 
 def get_db():
     conn = sqlite3.connect(DB_FILE)
