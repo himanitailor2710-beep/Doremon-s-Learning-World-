@@ -1,0 +1,10 @@
+{
+  "name": "doremons-learning-world",
+  "version": "1.0.0",
+  "private": true,
+  "description": "AI-Powered Gamified 3D LMS inspired by Doraemon",
+  "scripts": {
+    "build": "cd frontend && npm install && npm run build",
+    "start": "python run.py"
+  }
+}
